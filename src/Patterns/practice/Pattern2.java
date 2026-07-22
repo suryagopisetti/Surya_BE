@@ -8,7 +8,7 @@ public class Pattern2 {
 				if(j<=i) {
 					System.out.print(j+" ");
 				}else {
-					System.out.print(1+" ");
+					System.out.print(1);
 				}
 			}
 			System.out.println();
