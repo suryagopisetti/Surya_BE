@@ -26,8 +26,15 @@ public class BankAccount {
 		}
 			//deposit
 			public void deposit(double amount) {
+				if(amount>0) {
 				balance = balance+amount;
 				System.out.println("\ndeposited amount: " +amount);
+				System.out.println("deposited succesfully");
+				}else{
+					System.out.println("Invaid amount");
+					
+				}
+				
 			}
 			
 				
@@ -35,7 +42,8 @@ public class BankAccount {
 		    public void withdraw(double amount) {
 		        if (balance >= amount) {
 		            balance = balance - amount;
-		            System.out.println("\nWithdrawn Amount: " + amount);
+		            System.out.println("\nWithdrawnl Amount: " + amount);
+		            System.out.println("Withdrawal succesfully");
 		        } else {
 		            System.out.println("\nInsufficient balance");
 		        }

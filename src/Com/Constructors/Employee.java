@@ -47,7 +47,7 @@ public class Employee {
 	    }
 	    //method
 
-	    public void promoteEmployee() {
+	    public void promoteEmployee(int rating) {
 	        if (performanceRating >= 4) {
 	            salary = salary + (salary * 0.20);
 	            designation = "Senior " + designation;

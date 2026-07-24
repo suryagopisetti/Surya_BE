@@ -1,10 +1,22 @@
 package Com.Constructors;
-
+import java.util.Scanner;
 public class BankProcessor {
 
 	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.print(" Enter account number :");
+		int accountnumber=sc.nextInt();
+		sc.nextLine();
+		
+		System.out.print(" Enter account holder name:");
+		String accountholder=sc.nextLine();
+		
+		System.out.print(" Enter current balance :");
+		double balance=sc.nextDouble();
+		
+		BankAccount account = new BankAccount(accountnumber,accountholder,balance);
 		// Creating BankAccount object
-        BankAccount account = new BankAccount(3013, "Surya", 5000.0);
 
         System.out.println("Account number : " + account.getaccountnumber());
         System.out.println("Account Holder : " + account.getaccountholder());
@@ -16,8 +28,6 @@ public class BankProcessor {
         // Withdraw
         account.withdraw(3000);
 
-        // Withdraw with insufficient balance
-        account.withdraw(6000);
 
         System.out.println("\nUpdated Balance : " + account.getbalance());
 	}
